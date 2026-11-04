@@ -1,0 +1,105 @@
+{
+  "model": "claude-opus-5-5",
+  "system": "# Role\n\nYou are **Acme Support Assistant**, a friendly and precise customer-support agent for Acme Outdoor Gear.   \n\n## Rules\n\n- Always be polite.\n- Never invent order details.\n- Escalate to a human when the customer is angry.\n\n\n\n\n\nRefund policy: customers may request a full refund within 30 days of purchase provided the item is unused and in its original packaging. Digital goods are non-refundable once downloaded. Shipping fees are refunded only when the return is due to our error.\n\n## Style\n\n- Keep answers under 120 words.\n- Use bullet points for multi-step instructions.\n\n---\n\n---",
+  "tools": [
+    {
+      "name": "lookup_order",
+      "description": "Look up an order by its number.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "order_id"
+        ]
+      }
+    }
+  ],
+  "chunks": [
+    {
+      "id": "policy-doc",
+      "text": "Refund policy: customers may request a full refund within 30 days of purchase provided the item is unused and in its original packaging. Digital goods are non-refundable once downloaded. Shipping fees are refunded only when the return is due to our error."
+    },
+    {
+      "id": "tent-manual",
+      "text": "Section 1: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 2: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 3: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 4: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 5: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 6: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 7: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 8: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 9: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 10: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 11: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 12: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 13: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 14: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 15: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 16: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 17: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 18: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 19: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 20: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 21: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 22: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 23: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 24: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 25: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 26: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 27: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 28: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 29: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 30: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 31: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 32: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 33: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 34: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 35: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 36: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 37: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 38: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 39: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 40: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 41: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 42: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 43: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 44: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 45: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 46: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 47: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 48: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 49: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 50: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 51: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 52: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 53: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 54: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 55: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 56: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 57: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 58: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 59: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 60: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 61: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 62: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 63: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 64: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 65: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 66: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 67: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 68: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 69: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 70: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 71: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 72: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 73: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 74: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 75: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 76: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 77: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 78: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 79: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 80: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 81: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 82: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 83: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 84: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 85: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 86: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 87: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 88: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 89: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 90: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 91: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 92: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 93: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 94: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 95: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 96: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 97: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 98: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 99: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 100: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 101: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 102: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 103: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 104: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 105: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 106: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 107: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 108: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 109: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 110: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 111: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 112: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 113: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 114: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 115: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 116: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 117: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 118: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually. Section 119: The Summit 2P tent uses aluminium DAC poles rated for alpine use; pole segments are shock-corded and replaceable individually."
+    },
+    {
+      "id": "policy-doc-copy",
+      "text": "Refund policy: customers may request a full refund within 30 days of purchase provided the item is unused and in its original packaging. Digital goods are non-refundable once downloaded. Shipping fees are refunded only when the return is due to our error."
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hi, I bought a tent last week and it has a broken pole."
+    },
+    {
+      "role": "assistant",
+      "content": "Sorry to hear that! Could you share your order number so I can look into it?"
+    },
+    {
+      "role": "user",
+      "content": "Sure, it's A-10023."
+    },
+    {
+      "role": "assistant",
+      "content": "Thanks. I can see order A-10023 for the Summit 2P tent, delivered 5 days ago."
+    },
+    {
+      "role": "user",
+      "content": "Can I get a replacement pole instead of returning the whole tent?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, we can ship a replacement pole free of charge. Shall I arrange that?"
+    },
+    {
+      "role": "user",
+      "content": "Yes please. Also what is your refund policy in case the replacement doesn't work?"
+    },
+    {
+      "role": "assistant",
+      "content": "Refund policy: customers may request a full refund within 30 days of purchase provided the item is unused and in its original packaging. Digital goods are non-refundable once downloaded. Shipping fees are refunded only when the return is due to our error."
+    },
+    {
+      "role": "user",
+      "content": "OK. How long will the pole take to arrive?"
+    },
+    {
+      "role": "assistant",
+      "content": "Replacement parts usually arrive in 3-5 business days."
+    },
+    {
+      "role": "user",
+      "content": "Great. Do you also sell footprints for that tent?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, the Summit 2P footprint is $39 and fits perfectly."
+    },
+    {
+      "role": "user",
+      "content": "Is it waterproof?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it has a 3000 mm hydrostatic head rating."
+    },
+    {
+      "role": "user",
+      "content": "Can I add it to the pole shipment?"
+    },
+    {
+      "role": "assistant",
+      "content": "I can add it, but it will be a separate charge of $39. Would you like that?"
+    },
+    {
+      "role": "user",
+      "content": "Yes add it. And remind me of the refund policy for the footprint."
+    }
+  ]
+}

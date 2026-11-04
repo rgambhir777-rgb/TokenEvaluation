@@ -1,0 +1,21 @@
+{
+  "_comment": "USD per 1M tokens. Edit freely. Override location with TOKEN_EVAL_PRICING=/path/to/pricing.json or a pricing.json in the working directory. tier: small|medium|large is used for cheaper-model suggestions. min_cacheable_tokens is the shortest prefix the provider will cache.",
+  "default": {
+    "provider": "unknown", "tier": "medium",
+    "input": 3.0, "output": 15.0, "cache_write": 3.75, "cache_read": 0.3,
+    "min_cacheable_tokens": 1024
+  },
+  "models": {
+    "claude-fable-5-1":  {"provider": "anthropic", "tier": "large",  "input": 10.0, "output": 50.0, "cache_write": 12.5, "cache_read": 0.25, "min_cacheable_tokens": 1024},
+    "claude-opus-5-5":   {"provider": "anthropic", "tier": "large",  "input": 4.0,  "output": 20.0, "cache_write": 5.0,  "cache_read": 0.20, "min_cacheable_tokens": 1024},
+    "claude-opus-5":     {"provider": "anthropic", "tier": "large",  "input": 5.0,  "output": 25.0, "cache_write": 6.25, "cache_read": 0.50, "min_cacheable_tokens": 1024},
+    "claude-sonnet-5-5": {"provider": "anthropic", "tier": "medium", "input": 2.0,  "output": 10.0, "cache_write": 2.5,  "cache_read": 0.20, "min_cacheable_tokens": 1024},
+    "claude-sonnet-4-6": {"provider": "anthropic", "tier": "medium", "input": 3.0,  "output": 15.0, "cache_write": 3.75, "cache_read": 0.30, "min_cacheable_tokens": 1024},
+    "claude-haiku-5-5":  {"provider": "anthropic", "tier": "small",  "input": 0.10, "output": 0.50, "cache_write": 0.125, "cache_read": 0.01, "min_cacheable_tokens": 2048},
+    "claude-haiku-4-5":  {"provider": "anthropic", "tier": "small",  "input": 1.0,  "output": 5.0,  "cache_write": 1.25, "cache_read": 0.10, "min_cacheable_tokens": 2048},
+    "gpt-6.1-sol":       {"provider": "openai",    "tier": "medium", "input": 2.0,  "output": 10.0, "cache_write": 2.0,  "cache_read": 0.20, "min_cacheable_tokens": 1024, "_source": "MultiSourceRagChatbot .env.example; cache_read unverified"},
+    "gpt-6-luna":        {"provider": "openai",    "tier": "small",  "input": 0.10, "output": 0.50, "cache_write": 0.10, "cache_read": 0.01, "min_cacheable_tokens": 1024, "_source": "MultiSourceRagChatbot .env.example; cache_read unverified"},
+    "gpt-4o":            {"provider": "openai",    "tier": "medium", "input": 2.5,  "output": 10.0, "cache_write": 2.5,  "cache_read": 1.25, "min_cacheable_tokens": 1024},
+    "gpt-4o-mini":       {"provider": "openai",    "tier": "small",  "input": 0.15, "output": 0.60, "cache_write": 0.15, "cache_read": 0.075, "min_cacheable_tokens": 1024}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "task":    {"tokens": 20000,   "usd": 0.10},
+  "session": {"tokens": 100000,  "usd": 0.50},
+  "day":     {"tokens": 2000000, "usd": 10.00},
+  "warn_at": 0.70,
+  "stop_at": 0.90
+}
